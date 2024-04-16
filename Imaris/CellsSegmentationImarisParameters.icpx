@@ -1,0 +1,61 @@
+<creationparameters>
+  <creationparameter classtypeid="bpCellsViewer" name="Cells 1">
+<bpCellsCreationParameters mFormatVersion="9.2" mSourceImageIndex="0" mEnableRegionOfInterest="true" mProcessEntireImage="false" mCellType="eCellMembrane" mEnableNucleusDetection="false" mSplitCellsOption="eNoSplit" mSplitCellsByMasksOption="eVoronoi" mCellOption="eExpandBody" mCellBodyFillHoles="true" mNucleusFillHoles="true" mSplitNucleiBySeeds="false" mNucleiSeedsEstimatedDiameter="1.62045" mNucleiSeedsBackgroundSubtraction="true" mCellSeedsEstimatedDiameter="1.62045" mCellSeedsBackgroundSubtraction="true" mEnableVesicleDetection="false" mEnableVesicleTracking="false" mVesicleTrackingMaxDist="1" mTrackingGapsClose="true" mTrackingGapsSize="3" mTrackingGapsFill="true" mCellMembraneFilterOption="eLocalContrast" mCellMembraneSmoothFilterWidthSmallest="0.324091" mCellMembraneMergeAutomaticThreshold="false" mCellMembraneMergeManualThreshold="0.412037" mCellMembraneMergeIntensityAutomaticThreshold="false" mCellMembraneMergeIntensityManualThreshold="108.337">
+<bpRegionOfInterestContainer>
+<bpRegionOfInterest mMinXYZ="180 102 0" mMaxXYZ="518 1081 50" mMinT="0" mMaxT="0" mName="Region of Interest 1" mActive="true" mSelected="false"/>
+</bpRegionOfInterestContainer>
+<mCellBodyDetection mSourceChannelIndex="0" mSmoothEnable="true" mSmoothFilterWidth="3" mLocalContrastEnable="false" mLocalContrastFilterWidth="0.648181" mAutomaticThreshold="true" mManualThreshold="200" mEnableTracking="false" mFilterWidthManual="true"/>
+<mNucleusDetection mSourceChannelIndex="0" mSmoothEnable="true" mSmoothFilterWidth="0.162045" mLocalContrastEnable="false" mLocalContrastFilterWidth="0.648181" mAutomaticThreshold="true" mManualThreshold="200" mEnableTracking="false" mFilterWidthManual="false"/>
+<mNucleiSeedsFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mNucleiSeedsFilter>
+<mCellSeedsFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mCellSeedsFilter>
+<mFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="30" mUpperThresholdEnable="true" mUpperThresholdManual="true" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="800" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="30.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Cell Volume" mUnit="um^3" mFactors="0"/>
+</bpStatisticsFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="0.426755" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="73877.3" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="0.427" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Cell Sphericity" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mFilter>
+<mTrackFilter>
+</mTrackFilter>
+<mCellMembraneDetection mEnergyType="eCV" mAutomaticMergeEnabled="false" mRemoveTinyRegionEnabled="false" mRemoveTinyRegionDiameter="1" mShapeSmoothCoeff="0" mShapeRadiusCoeff="5" mRegionMaxDiameter="10" mNumIteration="0" mInitializationEnabled="true" mViscousTransformEnabled="true"/>
+<mFilterNucleus>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="10" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="10.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Nucleus Number of Voxels" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mFilterNucleus>
+<mCellTrackingAlgorithmParameters>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+</mCellTrackingAlgorithmParameters>
+<mNucleusTrackingAlgorithmParameters>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+</mNucleusTrackingAlgorithmParameters>
+<mCellTrackFilter>
+</mCellTrackFilter>
+<mNucleusAndVesicleTrackFilter>
+</mNucleusAndVesicleTrackFilter>
+<cCVesicleCreationParameters0 mVesicleChannelIndex="0" mVesicleEstimatedDiameter="1.62045" mVesicleBackgroundSubtraction="true" mTypeName="Type A" mEnableRegionGrowing="false" mRegionGrowingType="eLocalContrast" mRegionGrowingAutomaticThreshold="true" mRegionGrowingManualThreshold="0" mRegionGrowingDiameter="eDiameterFromVolume" mCreateRegionChannel="false">
+<bpStatisticsFilterContainer>
+</bpStatisticsFilterContainer>
+</cCVesicleCreationParameters0>
+<cCVesicleTrackParameters0>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+</cCVesicleTrackParameters0>
+</bpCellsCreationParameters>
+
+  </creationparameter>
+</creationparameters>
