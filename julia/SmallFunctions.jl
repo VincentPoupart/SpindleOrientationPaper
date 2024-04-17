@@ -188,13 +188,13 @@ end
 function FilteringCellShape(CellShape_df_final::DataFrame)
     filtered_df = copy(CellShape_df_final)
     filtered_df = filter(row ->
-            row[:MeanCellVolume] > 100
+            row[:MeanCellVolume] > 75
                 && row[:MeanCellVolume] < 250
                 && row[:CellVolumeSlope] < 0.25
                 && row[:CellVolumeSlope] > -0.25
                 && row[:Duration] > 10
                 && row[:VarianceCellVolume] < 50
-                && row[:VarianceOrientationCtoDP] < 100
+                #&& row[:VarianceOrientationCtoDP] < 100
                 && row[:MeanDistanceDTC] < 100, filtered_df)
     dropmissing!(filtered_df)
     return filtered_df

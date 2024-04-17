@@ -1,15 +1,3 @@
-% for i = 1:1:length(Celloutput)
-%     if Celloutput(i).scoring(1,1) == -5000 || Celloutput(i).scoring(1,1) == 5000
-%         Celloutput(i).scoring(1,1) = NaN;
-%     end
-%      if Celloutput(i).scoring(1,2) == -5000 || Celloutput(i).scoring(1,2) == 5000
-%         Celloutput(i).scoring(1,2) = NaN;
-%      end
-%     if Celloutput(i).scoring(1,3) == -5000 || Celloutput(i).scoring(1,3) == 5000
-%         Celloutput(i).scoring(1,3) = NaN;
-%     end
-%
-% end
 
 for i = 1:1:length(Celloutput)
     gonad = Celloutput(i).gonad;
@@ -71,19 +59,6 @@ for i = 1:1:length(Celloutput)
                         Celloutput(i).meas(j,39) = Cell_Ellipsoid_Axis_Length_C;
                         Celloutput(i).meas(j,46) = Cell_Ellipticity_oblate;
                         Celloutput(i).meas(j,47) = Cell_Ellipticity_prolate;
-                        
-                        long_Axis_vector_i  = Celloutput(i).meas(j,27:29);
-                        if j ~= 1
-                            
-                            long_Axis_vector_i_minus_1  = Celloutput(i).meas(j-1,52:54);
-                            
-                            angle = (acos(dot(long_Axis_vector_i ,long_Axis_vector_i_minus_1)/(norm(long_Axis_vector_i)*norm(long_Axis_vector_i_minus_1))))*180/pi();
-                            if angle > 90
-                                long_Axis_vector_i =   long_Axis_vector_i * -1;
-                            end
-                        end
-                        Celloutput(i).meas(j,52:54) = long_Axis_vector_i;
-                        
                     end
                 end
             end
